@@ -1,0 +1,42 @@
+<!-- remove sensor -->
+{% extends"base.html" %}
+{% block content%}
+<style>
+    form {
+        margin-top: 20px;
+    }
+
+    select {
+        width: 60%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        width: 60%;
+        background-color: #f44336;
+        color: white;
+        padding: 12px 20px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #d32f2f;
+    }
+</style>
+<form action="http://localhost:8080/del_user" method="post">
+    <h1>Remover Usuário:</h1>
+    <select name="user" class="Input">
+    {% for key, value in users.items() %}
+    <option>{{ key }}</option>
+    {% endfor %}
+    <p><input type = "submit" value = "Deletar" /></p>
+    </select>
+</form>
+{% endblock%}
