@@ -1,11 +1,41 @@
 <!-- register actuator -->
 {% extends"base.html" %}
 {% block content%}
-<body>
-    <form action = "http://localhost:8080/add_actuator" method = "post">
-        <h1>Atuador:</h1>
-        <p><input type = "text" name = "actuator" placeholder="Atuador" required/></p>
-        <p><input type = "submit" value = "Cadastrar" /></p>
-    </form>
-</body>
+<style>
+    form {
+        margin-top: 20px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 60%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        width: 60%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+<form action = "http://localhost:8080/add_actuator" method = "post">
+    <h1>Cadastrar Atuador:</h1>
+    <p><input type = "text" name = "actuator" placeholder="Atuador" required/></p>
+    <p><input type = "submit" value = "Cadastrar" /></p>
+</form>
 {% endblock%}
