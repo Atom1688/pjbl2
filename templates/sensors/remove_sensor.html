@@ -1,5 +1,6 @@
 <!-- remove sensor -->
-<html>
+{% extends"base.html" %}
+{% block content%}
 <body>
     <form action="http://localhost:8080/del_sensor" method="post">
         <select name="sensor" class="Input">
@@ -10,4 +11,4 @@
         </select>
     </form>
 </body>
-</html>
+{% endblock%}

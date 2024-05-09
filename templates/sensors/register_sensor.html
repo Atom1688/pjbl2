@@ -1,6 +1,6 @@
 <!-- register sensor -->
-
-<html>
+{% extends"base.html" %}
+{% block content%}
 <body>
     <form action = "http://localhost:8080/add_sensor" method = "post">
         <p>Sensor:</p>
@@ -8,4 +8,4 @@
         <p><input type = "submit" value = "Cadastrar" /></p>
     </form>
 </body>
-</html>
+{% endblock%}

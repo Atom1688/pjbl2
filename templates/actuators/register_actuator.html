@@ -1,11 +1,11 @@
 <!-- register actuator -->
-
-<html>
+{% extends"base.html" %}
+{% block content%}
 <body>
     <form action = "http://localhost:8080/add_actuator" method = "post">
-        <p>Atuador:</p>
+        <h1>Atuador:</h1>
         <p><input type = "text" name = "actuator" placeholder="Atuador" required/></p>
         <p><input type = "submit" value = "Cadastrar" /></p>
     </form>
 </body>
-</html>
+{% endblock%}
