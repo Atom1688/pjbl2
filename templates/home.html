@@ -12,9 +12,20 @@
         margin-bottom: 10px;
     }
 
+    li.sensor a {
+        background-color: #4CAF50;
+    }
+
+    li.actuator a {
+        background-color: #4c56af
+    }
+
+    li.user a {
+        background-color:  #e3943a;
+    }
+
     li a {
         display: block;
-        background-color: #4CAF50;
         color: white;
         padding: 10px 20px;
         margin: auto;
@@ -24,18 +35,18 @@
     }
 
     li a:hover {
-        background-color: #45a049;
+        opacity: 0.8;
     }
 </style>
 <ul>
-    <li><a href="/list_sensors">Listar Sensores</a></li>
-    <li><a href="/register_sensor">Cadastrar Sensor</a></li>
-    <li><a href="/remove_sensor">Remover Sensor</a></li>
-    <li><a href="/list_actuators">Listar Atuadores</a></li>
-    <li><a href="/register_actuator">Cadastrar Atuador</a></li>
-    <li><a href="/remove_actuator">Remover Atuador</a></li>
-    <li><a href="/list_users">Listar Usuário</a></li>
-    <li><a href="/register_user">Cadastrar Usuário</a></li>
-    <li><a href="/remove_user">Remover Usuário</a></li>
+    <li class="sensor"><a href="/list_sensors">Listar Sensores</a></li>
+    <li  class="sensor"><a href="/register_sensor">Cadastrar Sensor</a></li>
+    <li  class="sensor"><a href="/remove_sensor">Remover Sensor</a></li>
+    <li  class="actuator"><a href="/list_actuators">Listar Atuadores</a></li>
+    <li class="actuator"><a href="/register_actuator">Cadastrar Atuador</a></li>
+    <li class="actuator"><a href="/remove_actuator">Remover Atuador</a></li>
+    <li  class="user"><a href="/list_users">Listar Usuários</a></li>
+    <li class="user"><a href="/register_user">Cadastrar Usuário</a></li>
+    <li class="user"><a href="/remove_user">Remover Usuário</a></li>
 </ul>
 {% endblock%}
