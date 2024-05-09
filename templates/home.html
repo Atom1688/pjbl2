@@ -1,13 +1,11 @@
-<html>
-    <head>
-        <title>Minha Casa</title>
-    </head>
-    <body>
-        <h2>Minha Casa</h2>
-        <h3>Acesse o menu:</h3>
-        <ul>
-            <li><a href="/sensores">Listar Sensores</a></li>
-            <li><a href="/atuadores">Listar Atuadores</a></li>
-        </ul>
-    </body>
-</html>
+{% extends"base.html" %}
+{% block content%}
+<ul>
+    <li><a href="/register_sensor">Cadastrar Sensor</a></li>
+    <li><a href="/register_actuator">Cadastrar Atuador</a></li>
+    <li><a href="/list_sensors">Listar Sensores</a></li>
+    <li><a href="/list_actuators">Listar Atuadores</a></li>
+    <li><a href="/remove_sensor">Remover Sensor</a></li>
+    <li><a href="/remove_actuator">Remover Atuador</a></li>
+</ul>
+{% endblock%}

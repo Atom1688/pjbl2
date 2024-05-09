@@ -13,7 +13,7 @@ actuators = {}
 
 @app.route('/')
 def index():
-    return render_template("login.html")
+    return render_template("login/login.html")
 
 @app.route('/home')
 def home():
@@ -28,13 +28,13 @@ def validated_user():
         if user in users and users[user] == password:
             return render_template('home.html')
         else:
-            return render_template('invalid_credentials.html')
+            return render_template('login/invalid_credentials.html')
     else:
-        return render_template('login.html')
+        return render_template('login/login.html')
 
 @app.route('/register_sensor')
 def register_sensor():
-    return render_template("register_sensor.html")
+    return render_template("sensors/register_sensor.html")
 
 @app.route('/add_sensor', methods=['GET','POST'])
 def add_sensor():
@@ -44,16 +44,16 @@ def add_sensor():
     else:
         sensor = request.args.get('sensor', None)
     sensors[sensor] = None
-    return render_template("sensors.html", sensors=sensors)
+    return render_template("sensors/sensors.html", sensors=sensors)
 
 @app.route('/list_sensors')
 def list_sensors():
     global sensors
-    return render_template("sensors.html", sensors=sensors)
+    return render_template("sensors/sensors.html", sensors=sensors)
 
 @app.route('/remove_sensor')
 def remove_sensor():
-    return render_template("remove_sensor.html", sensors=sensors)
+    return render_template("sensors/remove_sensor.html", sensors=sensors)
 
 @app.route('/del_sensor', methods=['GET','POST'])
 def del_sensor():
@@ -63,13 +63,13 @@ def del_sensor():
     else:
         sensor = request.args.get('sensor', None)
     sensors.pop(sensor)
-    return render_template("sensors.html", sensors=sensors)
+    return render_template("sensors/sensors.html", sensors=sensors)
 
 # ---------------
 
 @app.route('/register_actuator')
 def register_actuator():
-    return render_template("register_actuator.html")
+    return render_template("actuators/register_actuator.html")
 
 @app.route('/add_actuator', methods=['GET','POST'])
 def add_actuator():
@@ -84,11 +84,11 @@ def add_actuator():
 @app.route('/list_actuators')
 def list_actuators():
     global actuators
-    return render_template("actuators.html", actuators=actuators)
+    return render_template("actuators/actuators.html", actuators=actuators)
 
 @app.route('/remove_actuator')
 def remove_actuator():
-    return render_template("remove_actuator.html", actuators=actuators)
+    return render_template("actuators/remove_actuator.html", actuators=actuators)
 
 @app.route('/del_actuator', methods=['GET','POST'])
 def del_actuator():
@@ -98,7 +98,7 @@ def del_actuator():
     else:
         actuator = request.args.get('actuator', None)
     actuators.pop(actuator)
-    return render_template("actuators.html", actuators=actuators)
+    return render_template("actuators/actuators.html", actuators=actuators)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080, debug=True)
