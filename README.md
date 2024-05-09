@@ -3,9 +3,9 @@
 - Uma aplicação Web com as seguintes funções:
   - [x] Tela de login com validação de usuário;
   - [x] Tela de cadastro de usuários (somente para usuário Admin);
-  - [ ] Tela de edição e remoção de usuários (somente para usuário Admin);
+  - [x] Tela de edição e remoção de usuários (somente para usuário Admin);
   - [x] Tela para cadastro de sensores e atuadores (somente para usuário Admin);
-  - [ ] Tela para edição e remoção de sensores e atuadores (somente para usuário Admin);
+  - [x] Tela para edição e remoção de sensores e atuadores (somente para usuário Admin);
   - [ ] Tela para visualização dos dados em Tempo Real (todos usuários tem acesso) coletados via MQTT Flask oriundos de uma aplicação do     RA1, sendo por sistema físico (ESP32 por exemplo) ou via Wokwi;
   - [ ] Tela para comandos remotos (todos usuários tem acesso) utilizando Flask mqtt para publicar na aplicação em ESP32 ou Wokwi;
 
@@ -13,7 +13,7 @@
 
 - [x] Utilização de Flask;
 - [x] Uso do framework, layouts e componentes estudados no TDE2;
-- [ ] CRUD para usuários, sensores e atuadores;
+- [x] CRUD para usuários, sensores e atuadores;
 - [ ] Comunicação com Broker MQTT para realizar funções subscribe e publish;
 - [ ] Realizar comandos remotos pela aplicação desenvolvida em Flask;
 - [ ] Ausência de bugs;
