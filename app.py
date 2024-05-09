@@ -79,7 +79,7 @@ def add_actuator():
     else:
         actuator = request.args.get('actuator', None)
     actuators[actuator] = None
-    return render_template("actuators.html", actuators=actuators)
+    return render_template("actuators/actuators.html", actuators=actuators)
 
 @app.route('/list_actuators')
 def list_actuators():
