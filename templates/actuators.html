@@ -1,0 +1,12 @@
+{% extends"base1.html" %}
+{% block content%}
+<ul>
+    {% for key, value in atuadores.items() %}
+        {% if(value > 0) %}
+            <li>{{key}} - ligado</li>
+        {% else %}
+            <li>{{key}} - desligado</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock%}
