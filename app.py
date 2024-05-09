@@ -28,7 +28,7 @@ def validated_user():
         if user in users and users[user] == password:
             return render_template('home.html')
         else:
-            return '<h1>invalid credentials!</h1>'
+            return render_template('invalid_credentials.html')
     else:
         return render_template('login.html')
 
