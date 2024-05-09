@@ -1,5 +1,32 @@
+<!-- home -->
 {% extends"base.html" %}
 {% block content%}
+<h1>Bem-vindo à Minha Casa</h1>
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    li a {
+        display: block;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin: auto;
+        width: 60%;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    li a:hover {
+        background-color: #45a049;
+    }
+</style>
 <ul>
     <li><a href="/register_sensor">Cadastrar Sensor</a></li>
     <li><a href="/register_actuator">Cadastrar Atuador</a></li>
