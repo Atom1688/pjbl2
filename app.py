@@ -127,13 +127,17 @@ def list_users():
 
 @app.route('/remove_user')
 def remove_user():
-    return render_template("users/remove_user.html", users=users)
+    removable_users = {key: value for key, value in users.items() if key != "admin"}
+    return render_template("users/remove_user.html", users=removable_users)
 
 @app.route('/del_user', methods=['GET','POST'])
 def del_user():
     global users
     if request.method == 'POST':
-        user = request.form['user']
+        if request.form['user'] == "admin":
+            return "O usuário 'admin' não pode ser deletado!", 403
+        else:
+            user = request.form['user']
     else:
         user = request.args.get('user', None)
     users.pop(user)
