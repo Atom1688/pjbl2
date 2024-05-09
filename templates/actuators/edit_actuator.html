@@ -36,15 +36,14 @@
         opacity: 0.8;
     }
 </style>
-<form action="http://localhost:8080/update_user" method="post" id="editUserForm">
-    <h1>Editar Usuário:</h1>
-    <select name="user" class="Input" id="userSelect">
-        {% for username, name in users.items() %}
-            <option value="{{ username }}">{{ username }}</option>
+<form action="http://localhost:8080/update_actuator" method="post" id="editActuatorForm">
+    <h1>Editar Atuador:</h1>
+    <select name="actuator" class="Input" id="actuatorSelect">
+        {% for actuator in actuators %}
+            <option value="{{ actuator }}">{{ actuator }}</option>
         {% endfor %}
     </select>
-    <p><input type="text" name="new_name" placeholder="Novo Nome" /></p>
-    <p><input type="password" name="new_password" placeholder="Nova Senha" /></p>
+    <p><input type="text" name="new_actuator_name" placeholder="Novo nome do atuador" /></p>
     <p><input type="submit" value="Atualizar" /></p>
 </form>
 {% endblock %}
