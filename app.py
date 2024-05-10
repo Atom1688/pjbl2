@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 app = Flask(__name__)
 
@@ -10,6 +10,7 @@ users = {
 
 sensors = {}
 actuators = {}
+current_user = ''
 
 # --------------- LOGIN --------------- # 
 
@@ -19,16 +20,25 @@ def index():
 
 @app.route('/home')
 def home():
-    return render_template("home.html")
+    # if 'username' in session:
+    if current_user == 'admin':
+        return render_template("admin_home.html")
+    else:
+        return render_template("user_home.html")
+
 
 @app.route('/validated_user', methods=['POST'])
 def validated_user():
+    global current_user
     if request.method == 'POST':
         user = request.form['user']
         password = request.form['password']
-        print(user, password)
         if user in users and users[user] == password:
-            return render_template('home.html')
+            current_user = user
+            if user == 'admin':
+                return render_template('admin_home.html')
+            else:
+                return render_template('user_home.html')
         else:
             return render_template('login/invalid_credentials.html')
     else:
