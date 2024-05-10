@@ -14,12 +14,12 @@
 - [x] Utilização de Flask;
 - [x] Uso do framework, layouts e componentes estudados no TDE2;
 - [x] CRUD para usuários, sensores e atuadores;
-- [ ] Comunicação com Broker MQTT para realizar funções subscribe e publish;
-- [ ] Realizar comandos remotos pela aplicação desenvolvida em Flask;
+- [x] Comunicação com Broker MQTT para realizar funções subscribe e publish;
+- [x] Realizar comandos remotos pela aplicação desenvolvida em Flask;
 - [x] Ausência de bugs;
 - Respeitar as seguintes regras:
   - [x] Somente um usuário Admin;
   - [x] Somente Admin pode criar, editar e deletar usuários, sensores e atuadores;
   - [x] Somente Admin pode listar usuários;
   - [x] Todos usuários podem listar sensores e atuadores e acessar dashboards de recebimento de dados via MQTT Flask;
-  - [ ] Todos usuários podem acessar tela de comandos remotos via MQTT Flask para enviar dados ao BROKER.
+  - [x] Todos usuários podem acessar tela de comandos remotos via MQTT Flask para enviar dados ao BROKER.
