@@ -3,7 +3,7 @@ from flask import render_template, request, Blueprint
 users = {
     'admin': 'admin',
     'rafael': '12345',
-    'matheus': '54321'
+    'mateus': '54321'
 }
 
 user = Blueprint("user", __name__)
