@@ -24,6 +24,10 @@
         background-color:  #e3943a;
     }
 
+    li.mqtt a {
+        background-color:  #2db998;
+    }
+
     li a {
         display: block;
         color: white;
@@ -41,5 +45,7 @@
 <ul>
     <li class="sensor"><a href="/list_sensors">Listar Sensores</a></li>
     <li  class="actuator"><a href="/list_actuators">Listar Atuadores</a></li>
+    <li class="mqtt"><a href="/mqtt_display">Exibir MQTT</a></li>
+    <li class="mqtt"><a href="/mqtt_publish">Enviar MQTT</a></li>
 </ul>
 {% endblock%}

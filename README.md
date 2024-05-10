@@ -16,10 +16,10 @@
 - [x] CRUD para usuários, sensores e atuadores;
 - [ ] Comunicação com Broker MQTT para realizar funções subscribe e publish;
 - [ ] Realizar comandos remotos pela aplicação desenvolvida em Flask;
-- [ ] Ausência de bugs;
+- [x] Ausência de bugs;
 - Respeitar as seguintes regras:
   - [x] Somente um usuário Admin;
-  - [ ] Somente Admin pode criar, editar e deletar usuários, sensores e atuadores;
-  - [ ] Somente Admin pode listar usuários;
-  - [ ] Todos usuários podem listar sensores e atuadores e acessar dashboards de recebimento de dados via MQTT Flask;
+  - [x] Somente Admin pode criar, editar e deletar usuários, sensores e atuadores;
+  - [x] Somente Admin pode listar usuários;
+  - [x] Todos usuários podem listar sensores e atuadores e acessar dashboards de recebimento de dados via MQTT Flask;
   - [ ] Todos usuários podem acessar tela de comandos remotos via MQTT Flask para enviar dados ao BROKER.
