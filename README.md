@@ -6,8 +6,8 @@
   - [x] Tela de edição e remoção de usuários (somente para usuário Admin);
   - [x] Tela para cadastro de sensores e atuadores (somente para usuário Admin);
   - [x] Tela para edição e remoção de sensores e atuadores (somente para usuário Admin);
-  - [ ] Tela para visualização dos dados em Tempo Real (todos usuários tem acesso) coletados via MQTT Flask oriundos de uma aplicação do     RA1, sendo por sistema físico (ESP32 por exemplo) ou via Wokwi;
-  - [ ] Tela para comandos remotos (todos usuários tem acesso) utilizando Flask mqtt para publicar na aplicação em ESP32 ou Wokwi;
+  - [x] Tela para visualização dos dados em Tempo Real (todos usuários tem acesso) coletados via MQTT Flask oriundos de uma aplicação do     RA1, sendo por sistema físico (ESP32 por exemplo) ou via Wokwi;
+  - [x] Tela para comandos remotos (todos usuários tem acesso) utilizando Flask mqtt para publicar na aplicação em ESP32 ou Wokwi;
 
 ### Requisitos mínimos da Fase 2 do PjBL:
 
