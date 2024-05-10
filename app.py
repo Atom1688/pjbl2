@@ -11,8 +11,8 @@ users = {
     'matheus': '54321'
 }
 
-sensors = {}
-actuators = {}
+sensors = {'Sensor de umidade 1', 'Sensor de umidade 2'}
+actuators = {'Led amarelo', 'Led vermelho'}
 current_user = ''
 
 # --------------- MQTT --------------- # 
@@ -60,9 +60,9 @@ def index():
 @app.route('/home')
 def home():
     if current_user == 'admin':
-        return render_template("admin_home.html")
+        return render_template("admin_home.html", user=current_user)
     else:
-        return render_template("user_home.html")
+        return render_template("user_home.html", user=current_user)
 
 
 @app.route('/validated_user', methods=['POST'])
@@ -74,9 +74,9 @@ def validated_user():
         if user in users and users[user] == password:
             current_user = user
             if user == 'admin':
-                return render_template('admin_home.html')
+                return render_template('admin_home.html', user=current_user)
             else:
-                return render_template('user_home.html')
+                return render_template('user_home.html', user=current_user)
         else:
             return render_template('login/invalid_credentials.html')
     else:
